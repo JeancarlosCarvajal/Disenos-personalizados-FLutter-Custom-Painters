@@ -1,6 +1,6 @@
 # custom_painter
 
-Disenos personalizados FLutter Custom Painters
+Disenos personalizados FLutter Custom Painters para Headers
 
 ## Appearance Application
 

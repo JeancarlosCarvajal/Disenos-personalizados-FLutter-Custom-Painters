@@ -9,8 +9,10 @@ class HeadersPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: HeadersCuadro(),
+    return const Scaffold(
+      // body: HeaderCuadrado(),
+      body: HeaderCircularBorder(),
+      // body: HeaderDiagonal(),
     );
   }
 }
