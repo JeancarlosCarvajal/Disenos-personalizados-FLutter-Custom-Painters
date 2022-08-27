@@ -8,5 +8,4 @@ Disenos personalizados FLutter Custom Painters para Headers
 ![Appearance 2](appearance/2.png)
 ![Appearance 3](appearance/3.png)
 ![Appearance 4](appearance/4.png)
-
-<!-- <p st -->
+ 

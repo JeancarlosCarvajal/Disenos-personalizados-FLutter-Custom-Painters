@@ -12,7 +12,8 @@ class HeadersPage extends StatelessWidget {
     return const Scaffold(
       // body: HeaderCuadrado(),
       // body: HeaderCircularBorder(),
-      body: HeaderDiagonal(),
+      // body: HeaderDiagonal(),
+      body: HeaderTriangle(), 
     );
   }
 }
