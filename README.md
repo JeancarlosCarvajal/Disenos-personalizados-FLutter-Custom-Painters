@@ -9,5 +9,5 @@ Disenos personalizados FLutter Custom Painters para Headers
 ![Appearance 3](appearance/33.png)
 ![Appearance 4](appearance/44.png)
 ![Appearance 5](appearance/55.png)
-![Appearance 6](appearance/55.png)
+![Appearance 6](appearance/66.png)
  
