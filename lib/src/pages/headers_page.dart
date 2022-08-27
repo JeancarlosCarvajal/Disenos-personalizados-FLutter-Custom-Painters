@@ -1,3 +1,4 @@
+import 'package:custom_painter/src/pages/animations_page.dart';
 import 'package:custom_painter/src/widgets/headers.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,8 @@ class HeadersPage extends StatelessWidget {
       // body: HeaderPike(), 
       // body: HeaderCurve(),  
       // body: HeaderWave(),   
-      body: HeaderWaveGradient(),    
+      // body: HeaderWaveGradient(),    
+      body: AnimationsPage(),     
     );
   }
 }
