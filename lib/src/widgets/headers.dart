@@ -248,13 +248,13 @@ class _HeaderWavePainter extends CustomPainter {
     final path = Path();
 
     // dibujar con el path y el lapiz. empieza de izquierda a derecha como el reloj
-    // path.moveTo(0, size.height);
+    path.moveTo(0, size.height);
     path.lineTo(0, size.height*0.20);  
     // los primeroa dos puntos son el eje de curvatura y los otros dos puntos son el inicio y el fin
     // el segundo valor es relativo al ultimo valor, al estar por encima o por debajo del mismo me mueve la curva arriba o abajo
     path.quadraticBezierTo(size.width*0.25, size.height*0.30, size.width*0.5, size.height*0.20);
     path.quadraticBezierTo(size.width*0.75, size.height*0.10, size.width, size.height*0.20);
-    path.lineTo(size.width, 0);
+    path.lineTo(size.width, size.height);
 
     // dibuja canvas
     canvas.drawPath(path, paint); 
