@@ -15,7 +15,8 @@ class HeadersPage extends StatelessWidget {
       // body: HeaderDiagonal(),
       // body: HeaderTriangle(), 
       // body: HeaderPike(), 
-      body: HeaderCurve(),  
+      // body: HeaderCurve(),  
+      body: HeaderWave(),   
     );
   }
 }
