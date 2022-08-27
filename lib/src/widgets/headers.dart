@@ -301,10 +301,12 @@ class _HeaderWaveGradientPainter extends CustomPainter {
         Color(0xff6d05e8),
         Color(0xffc012ff),
         Color(0xff6d05fa),
+        Colors.red
       ],
-      stops: [
+      stops: [ // si se agrega un nuevo color se debe definir un stop
         0.2, 
         0.5,
+        0.8,
         1.0
       ]
     );
