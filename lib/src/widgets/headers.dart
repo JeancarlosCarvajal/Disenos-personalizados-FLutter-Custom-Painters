@@ -170,3 +170,51 @@ class _HeaderPikePainter extends CustomPainter {
   }
 
 }
+
+
+class HeaderCurve extends StatelessWidget {
+  const HeaderCurve ({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: double.infinity,
+      width: double.infinity,
+      // color: Color(0xff615aab),
+      child: CustomPaint(
+        painter: _HeaderCurvePainter(),
+      ),
+    );
+  }
+}
+
+
+class _HeaderCurvePainter extends CustomPainter {
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint(); // es el lapiz
+    //propiedades del lapiz
+    paint.color = Color(0xff615aab);
+    paint.style = PaintingStyle.fill; // son los border y el fiil es para rellenar. strock para lineas
+    paint.strokeWidth = 10.0; // espesor de la linea
+
+    final path = Path();
+
+    // dibujar con el path y el lapiz. empieza de izquierda a derecha como el reloj 
+    path.lineTo(0, size.height*0.20);  
+    // los primeroa dos puntos son el eje de curvatura y los otros dos puntos son el inicio y el fin
+    // el segundo valor es relativo al ultimo valor, al estar por encima o por debajo del mismo me mueve la curva arriba o abajo
+    path.quadraticBezierTo(size.width*0.5, size.height*0.40, size.width, size.height*0.20);
+    path.lineTo(size.width, 0);
+
+    // dibuja canvas
+    canvas.drawPath(path, paint); 
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    // siempre en true
+    return true;
+  }
+
+}
