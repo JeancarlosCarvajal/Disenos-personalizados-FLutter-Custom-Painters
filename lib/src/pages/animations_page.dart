@@ -36,6 +36,7 @@ class _CuadradoAnimadoState extends State<CuadradoAnimado> with SingleTickerProv
 
   // controlar la opacidad
   late Animation<double> opacidad;
+  late Animation<double> opacidadOut;
 
   // mover
   late Animation<double> moverDerecha;
@@ -64,28 +65,32 @@ class _CuadradoAnimadoState extends State<CuadradoAnimado> with SingleTickerProv
 
     // controllar la opacidad
     opacidad = Tween(begin: 0.1, end: 1.0).animate(
-      CurvedAnimation(parent: controller, curve: Curves.easeOut)
+      CurvedAnimation(parent: controller, curve: const Interval(0.0, 0.75, curve: Curves.easeOut))
     );
+    
+    opacidadOut = Tween(begin: 1.0, end: 0.1 ).animate( 
+      CurvedAnimation(parent: controller, curve: const Interval(0.75, 1.0, curve: Curves.easeOut))
+    );  
 
     // hacer la rotacion. el controller es el que manda a la animacion
     // rotation = Tween(begin: 0.0, end: 2 * Math.pi ).animate(controller);
     rotation = Tween(begin: 0.0, end: 2 * Math.pi ).animate(
       // CurvedAnimation(parent: controller, curve: Curves.easeInOutBack)
       CurvedAnimation(parent: controller, curve: const Interval(0.0, 0.25, curve: Curves.easeOut))
-    );
+    ); 
+
 
     // siempre en el init state se debe colocar los listener
     controller.addListener(() {
-      print('jean: Status: ${controller.status}');
+      // print('jean: Status: ${controller.status}');
       if(controller.status == AnimationStatus.completed){
         // controller.repeat();
         // controller.reverse();
-        controller.reset();
+        // controller.reset();
       } 
       // else if(controller.status == AnimationStatus.dismissed){
       //   controller.forward();
       // }
-      
     });
 
     super.initState();
@@ -113,14 +118,14 @@ class _CuadradoAnimadoState extends State<CuadradoAnimado> with SingleTickerProv
       builder: (BuildContext context, Widget? childRectangulo) {
         // print('jean: ${rotation.value}'); 
         // print('jean: Opacidad: ${opacidad.value}');
-        // print('jean: Rotation: ${rotation.value}');
+        print('jean: opacidad: ${opacidadOut.value}');
         return  Transform.translate(
           offset: Offset(moverDerecha.value, 0),
           child: Transform.rotate(
             angle: rotation.value,
             // child: child, // otra opcion 1
             child: Opacity(
-              opacity: opacidad.value,
+              opacity: opacidad.value == 1 ? opacidadOut.value : opacidad.value,
               child: Transform.scale(
                 scale: agrandar.value,
                 child: childRectangulo

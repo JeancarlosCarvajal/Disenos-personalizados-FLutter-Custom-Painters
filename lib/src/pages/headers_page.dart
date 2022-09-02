@@ -1,4 +1,5 @@
 import 'package:custom_painter/src/pages/animations_page.dart';
+import 'package:custom_painter/src/retos/cuadrado_animado_page.dart';
 import 'package:custom_painter/src/widgets/headers.dart';
 import 'package:flutter/material.dart';
 
@@ -19,7 +20,8 @@ class HeadersPage extends StatelessWidget {
       // body: HeaderCurve(),  
       // body: HeaderWave(),   
       // body: HeaderWaveGradient(),    
-      body: AnimationsPage(),     
+      // body: AnimationsPage(),     
+      body: CuadradoAnimadoPage(),      
     );
   }
 }
