@@ -14,4 +14,5 @@ Disenos personalizados FLutter Custom Painters para Headers
 ![Appearance 8](appearance/88.png)
 ![Appearance 9](appearance/99.png)
 
-[<img src="appearance/99.png" >](appearance/movie-1.mp4 "Now in Android: 55")
+<video src="appearance/99.png"></video>
+<!-- [<img src="appearance/99.png" >](appearance/movie-1.mp4 "Now in Android: 55") -->
